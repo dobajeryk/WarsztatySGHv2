@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class StatusService {
 
     public Status randomStatus() {
-        List<Status> statuses = new ArrayList<>(Arrays.asList(Status.values()));
+        List<Status> statuses = new ArrayList<>(Arrays.asList(Status.values())); // new allowed here
         int randomIndex = ThreadLocalRandom.current().nextInt(0, statuses.size());
         return statuses.get(randomIndex);
     }

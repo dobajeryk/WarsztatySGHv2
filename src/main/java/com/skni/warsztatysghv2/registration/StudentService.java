@@ -17,7 +17,7 @@ public class StudentService {
         String lastName = application.getLastName();
         String email = application.getEmail();
         Status status = statusService.randomStatus();
-        return new Student(id, firstName, lastName, email, status);
+        return new Student(id, firstName, lastName, email, status); // new allowed here
     }
 
 }
