@@ -4,18 +4,18 @@ public class StudentService {
 
     private final UUIDStudentIdGenerator studentIdGenerator = new UUIDStudentIdGenerator();
     private final StatusService statusService = new StatusService();
-    private final ApplicationService applicationService = new ApplicationService();
+    private final ApplicationFormService applicationFormService = new ApplicationFormService();
 
     public void printStudent() {
-        Student student = create(applicationService.createMock());
+        Student student = create(applicationFormService.createMock());
         System.out.println(student);
     }
 
-    public Student create(Application application) {
+    public Student create(ApplicationForm applicationForm) {
         String id = studentIdGenerator.getNext();
-        String firstName = application.getFirstName();
-        String lastName = application.getLastName();
-        String email = application.getEmail();
+        String firstName = applicationForm.getFirstName();
+        String lastName = applicationForm.getLastName();
+        String email = applicationForm.getEmail();
         Status status = statusService.randomStatus();
         return new Student(id, firstName, lastName, email, status); // new allowed here
     }
