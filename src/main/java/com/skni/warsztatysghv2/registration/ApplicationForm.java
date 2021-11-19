@@ -6,6 +6,7 @@ public class ApplicationForm {
     private final String lastName;
     private final String email;
 
+
     public ApplicationForm(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
