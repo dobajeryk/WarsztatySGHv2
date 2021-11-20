@@ -1,5 +1,8 @@
 package com.skni.warsztatysghv2.registration;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class StudentService {
 
     private final UUIDStudentIdGenerator studentIdGenerator = new UUIDStudentIdGenerator();
