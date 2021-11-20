@@ -10,10 +10,10 @@ import org.springframework.context.event.EventListener;
 @SpringBootApplication
 public class WarsztatySgHv2Application {
 
-    private final StudentService studentService;
+    private StudentService studentService;
 
     @Autowired
-    public WarsztatySgHv2Application(StudentService studentService) {
+    public void setStudentService(StudentService studentService) {
         this.studentService = studentService;
     }
 
